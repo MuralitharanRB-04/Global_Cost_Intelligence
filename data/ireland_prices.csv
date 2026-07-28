@@ -1,0 +1,23 @@
+product,category,price_eur,unit
+Milk (1L),Groceries,1.55,per litre
+Bread (800g),Groceries,2.25,per loaf
+Chicken (1kg),Groceries,14.50,per kg
+Rice (1kg),Groceries,3.20,per kg
+Apples (1kg),Groceries,4.10,per kg
+Tomatoes (1kg),Groceries,4.80,per kg
+Eggs (12),Groceries,4.80,per dozen
+Potatoes (1kg),Groceries,2.40,per kg
+Onions (1kg),Groceries,2.10,per kg
+Cooking Oil (1L),Groceries,8.50,per litre
+iPhone 16 (128GB),Electronics,979,per piece
+Samsung Galaxy S25,Electronics,929,per piece
+MacBook Air M3,Electronics,1599,per piece
+Dell Inspiron Laptop,Electronics,849,per piece
+Sony Headphones,Electronics,149,per piece
+Nike Running Shoes,Clothing,135,per pair
+Levi's Jeans,Clothing,95,per piece
+Dettol Soap (Pack of 4),Personal Care,6.50,per pack
+Colgate Toothpaste,Personal Care,4.80,per tube
+Ariel Detergent (1kg),Household,15.99,per pack
+Tata Salt (1kg),Groceries,3.50,per kg
+Amul Butter (100g),Groceries,4.20,per pack
