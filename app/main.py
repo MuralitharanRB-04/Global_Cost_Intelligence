@@ -1,15 +1,13 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="India vs Ireland Cost Intelligence",
+    page_title="Global Cost Intelligence | India vs Ireland",
     page_icon="🌍",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-st.title("🇮🇳 India vs 🇮🇪 Ireland Cost Intelligence Platform")
-st.markdown("""
-### A Decision Support System for Expats, Students & Remote Workers
-Compare product prices, analyze cost differences, and get insights to optimize spending.
-""")
+st.title("🌍 Global Cost Intelligence Platform")
+st.markdown("### India vs Ireland | Decision Support System for Expats & Students")
 
-st.info("Navigate using the sidebar to explore Dashboard, Category Analysis, and Decision Support.")
+st.info("Use the sidebar to navigate between Dashboard, Category Analysis, Decision Support, Advanced Insights, and Cost of Living Index.")

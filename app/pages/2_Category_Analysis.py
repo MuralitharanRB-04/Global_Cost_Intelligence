@@ -17,13 +17,11 @@ def load_data():
 
 df = load_data()
 
-categories = df["category"].unique()
-selected = st.selectbox("Select Category", categories)
-
-cat_df = df[df["category"] == selected]
+category = st.selectbox("Select Category", df["category"].unique())
+cat_df = df[df["category"] == category]
 
 fig = px.bar(cat_df, x="product", y=["price_inr", "price_ie_inr"],
-             barmode="group", title=f"{selected} – Price Comparison (₹)")
+             barmode="group", title=f"{category} Price Comparison")
 st.plotly_chart(fig, use_container_width=True)
 
-st.dataframe(cat_df[["product", "price_inr", "price_eur", "diff_percent"]])
+st.dataframe(cat_df)

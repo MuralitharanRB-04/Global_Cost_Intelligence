@@ -16,20 +16,21 @@ def load_data():
 
 df = load_data()
 
-product = st.selectbox("Select Product", df["product"].unique())
+product = st.selectbox("Select a Product", df["product"].unique())
 row = df[df["product"] == product].iloc[0]
 
-st.subheader(f"Analysis for: {product}")
+st.subheader(f"Analysis: {product}")
 
-col1, col2 = st.columns(2)
-col1.metric("Price in India", f"₹{row['price_inr']:,.0f}")
-col2.metric("Price in Ireland", f"€{row['price_eur']:.2f} (≈ ₹{row['price_ie_inr']:,.0f})")
+c1, c2, c3 = st.columns(3)
+c1.metric("India Price", f"₹{row['price_inr']:,.0f}")
+c2.metric("Ireland Price", f"€{row['price_eur']:.2f}")
+c3.metric("Difference", f"{row['diff_percent']:.1f}%")
 
-st.success(f"**{row['diff_percent']:.1f}% more expensive in Ireland**")
+st.progress(min(row["diff_percent"] / 100, 1.0))
 
-if row["diff_percent"] > 70:
-    st.warning("High difference → Prefer buying in India if possible (especially non-perishables).")
-elif row["diff_percent"] > 40:
-    st.info("Moderate difference → Compare quality and convenience before deciding.")
+if row["diff_percent"] >= 70:
+    st.error("🔴 High Difference → Strongly prefer buying in India (if possible)")
+elif row["diff_percent"] >= 40:
+    st.warning("🟡 Moderate Difference → Compare quality, shipping & convenience")
 else:
-    st.success("Low difference → Buy based on availability and preference.")
+    st.success("🟢 Low Difference → Buy based on preference and availability")

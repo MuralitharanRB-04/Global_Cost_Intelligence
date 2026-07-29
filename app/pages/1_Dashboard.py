@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import os
 
 st.set_page_config(page_title="Dashboard", page_icon="📊", layout="wide")
@@ -19,22 +18,21 @@ def load_data():
 
 df = load_data()
 
-# Metrics
-col1, col2, col3 = st.columns(3)
+# KPI Metrics
+col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total Products", len(df))
-col2.metric("Avg % Higher in Ireland", f"{df['diff_percent'].mean():.1f}%")
-col3.metric("Most Expensive Category", df.groupby("category")["diff_percent"].mean().idxmax())
+col2.metric("Avg Difference", f"{df['diff_percent'].mean():.1f}%")
+col3.metric("Highest Gap Category", df.groupby("category")["diff_percent"].mean().idxmax())
+col4.metric("Lowest Gap Category", df.groupby("category")["diff_percent"].mean().idxmin())
 
-# Overall Scatter
-st.subheader("Overall Price Difference Scatter Plot")
+# Main Scatter Plot
+st.subheader("Overall Price Difference")
 fig = px.scatter(
     df, x="product", y="diff_percent", color="category",
-    size="price_diff_inr", title="% Higher in Ireland (capped at 100%)",
-    hover_data=["price_inr", "price_eur"], size_max=25
+    size="price_diff_inr", hover_data=["price_inr", "price_eur"],
+    title="% Higher in Ireland (Capped at 100%)", size_max=28
 )
-fig.update_layout(height=550, xaxis_tickangle=-45)
+fig.update_layout(height=600, xaxis_tickangle=-45)
 st.plotly_chart(fig, use_container_width=True)
 
-# Data Table
-st.subheader("Full Dataset")
 st.dataframe(df[["product", "category", "price_inr", "price_eur", "diff_percent"]])
