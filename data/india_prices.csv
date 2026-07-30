@@ -9,15 +9,24 @@ Eggs (12),Groceries,95,per dozen
 Potatoes (1kg),Groceries,42,per kg
 Onions (1kg),Groceries,55,per kg
 Cooking Oil (1L),Groceries,180,per litre
+Bananas (1kg),Groceries,60,per kg
+Paneer (200g),Groceries,90,per pack
 iPhone 16 (128GB),Electronics,82999,per piece
 Samsung Galaxy S25,Electronics,76999,per piece
 MacBook Air M3,Electronics,129999,per piece
 Dell Inspiron Laptop,Electronics,58999,per piece
 Sony Headphones,Electronics,8999,per piece
+AirPods Pro,Electronics,24999,per piece
 Nike Running Shoes,Clothing,4999,per pair
 Levi's Jeans,Clothing,2799,per piece
+Formal Shirt,Clothing,1299,per piece
+Winter Jacket,Clothing,2999,per piece
 Dettol Soap (Pack of 4),Personal Care,180,per pack
 Colgate Toothpaste,Personal Care,135,per tube
+Shampoo (400ml),Personal Care,280,per bottle
+Face Wash,Personal Care,199,per tube
 Ariel Detergent (1kg),Household,220,per pack
+Toilet Paper (Pack),Household,180,per pack
+Dishwashing Liquid,Household,120,per bottle
 Tata Salt (1kg),Groceries,28,per kg
 Amul Butter (100g),Groceries,65,per pack
