@@ -26,3 +26,5 @@ global-cost-intelligence/
 
 
 streamlit run app/main.py
+
+https://global-cost-intelligence.onrender.com
